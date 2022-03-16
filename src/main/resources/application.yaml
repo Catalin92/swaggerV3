@@ -1,0 +1,7 @@
+server:
+  servlet.contextPath: /swagger
+  port: 8080
+
+logging:
+  level:
+    root: INFO

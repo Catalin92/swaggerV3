@@ -1,17 +1,23 @@
-package com.example.demo;
+package com.example.demo.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.Hidden;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 @Data
 @ToString
+@Builder
+@Schema(name = "author")
 public class Author {
+  @Parameter(name = "first_name")
   private String firstName;
+  @Parameter(name = "last_name")
   private String lastName;
+  @Parameter(name = "age")
   private int age;
 
   @Hidden
